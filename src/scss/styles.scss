@@ -1,0 +1,158 @@
+/*
+Theme Name: premierWordpress
+Description: premier wordpress des Jepsen
+Author: Magali 
+Author URI: https://github.com/marween
+Version: 1.0
+*/
+*{
+	margin:0;
+	padding:0;
+	text-decoration:none!important;
+}
+//menu
+li {
+	list-style:none;
+}
+
+.row{
+	margin:0!important;
+}
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
+.crimson{
+	font-family: 'Crimson Text', serif;
+}
+
+li.nav-item a{
+	display: block;
+    padding: .5rem 1rem;
+    color:black
+}
+
+
+.cg{
+	color:grey;
+}
+
+.f-75{
+	font-size:0.75rem;
+}
+
+// pagination
+.nav-links{
+
+}
+.page-numbers  {
+	display:block;
+	border-radius:50%;
+		-webkit-border-radius:50%;
+    	-moz-border-radius:50%;
+	border:1px solid grey;
+	padding-left: 5px;
+	padding-right: 5px;
+	width:30px;
+	height:30px;
+	color:grey;
+	text-align:center;
+	margin-left:5px;
+	margin-right:5px;
+}
+
+
+.page-numbers:hover {
+	text-decoration:none;
+	color:black;
+	background-color:darkgrey
+}
+
+.current {
+	color:white;
+	background-color:grey;
+}
+
+.bot-line{
+	border-bottom:1px rgb(220,220,220) solid;
+}
+
+div.nav-links {
+	margin:auto;
+	padding-top: 25px;
+	padding-bottom:25px;
+	display:flex;
+	flex:row;
+}
+// la single page
+.post-categories{
+	text-align: center;
+
+}
+.post-categories a, .text-warning a {
+	color:orange;
+	font-weight:bold;
+}
+.ofc {
+	object-fit:cover;
+}
+
+// page Home
+body > div > div > div > div > img.attachment-medium.size-medium.wp-post-image{
+	margin:auto;
+	display:block;
+	width: 100%;
+	object-fit:cover;
+	height:250px
+}
+
+body > div > div > div > div > ul{
+	display:flex;
+}
+body > div > div > div > div > ul > li {
+	padding:5px;
+	display:inline;
+}
+
+
+//  les commentaires 
+.comment-form-comment label, .comment-author .avatar {
+	display:none;
+}
+
+.comment a, .logged-in-as a{
+	color:grey;
+}
+
+
+// le footer
+footer{
+	background-color:#3d3f45;
+}
+.footer {
+	color:rgba(255,255,255,0.95)!important;
+	display:flex;
+	justify-content:center;
+	flex-direction:row;
+}
+.social{
+	background-color:#343639;
+	height:25px;
+
+}
+.widget-title{
+	font-weight:bold;
+	color:grey;
+	padding-left:5%;
+}
+.footer .widget ul li a {
+	color:white!important;
+	font-weight:bold;
+}
+
+#gallery-1 img{
+	padding:25px;
+	object-fit:cover;
+	border:0!important;
+}
+
