@@ -97,6 +97,24 @@ function notux_widgets_init() {
 			'before_title'	=> '<div class="widget-title th3">',
 			'after_title'	=> '</div>',
 		) );
+		register_sidebar( array(
+			'name'			=> __( 'sidebar', 'foodDog' ),
+			'id'			=> 'zone-widgets-4',
+			'description'	=> __( 'Description de la zone de widgets.', 'foodDog' ),
+			'before_widget'	=> '<div id="%1$s" class="widget %2$s mx-4 col-lg-4">',
+			'after_widget'	=> '</div>',
+			'before_title'	=> '<div class="widget-title th3">',
+			'after_title'	=> '</div>',
+		) );
+		register_sidebar( array(
+			'name'			=> __( 'Top', 'foodDog' ),
+			'id'			=> 'zone-widgets-5',
+			'description'	=> __( 'Description de la zone de widgets.', 'foodDog' ),
+			'before_widget'	=> '<div id="%1$s" class="widget %2$s mx-4 col-lg-4">',
+			'after_widget'	=> '</div>',
+			'before_title'	=> '<div class="widget-title th3">',
+			'after_title'	=> '</div>',
+		) );
 }
 add_action( 'widgets_init', 'notux_widgets_init' );
 
@@ -106,7 +124,20 @@ wp_enqueue_style('main-style');
 }
 add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
 
-
-
+// show popular posts
+function wpb_set_post_views($postID) {
+    $count_key = 'wpb_post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        $count = 0;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+    }else{
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
+//To keep the count accurate, lets get rid of prefetching
+remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
  
 ?>

@@ -98,7 +98,7 @@ div.nav-links {
 }
 
 // page Home
-body > div > div > div > div > img.attachment-medium.size-medium.wp-post-image{
+body > div > div > div > div > div > div > img.attachment-medium.size-medium.wp-post-image{
 	margin:auto;
 	display:block;
 	width: 100%;
@@ -106,16 +106,33 @@ body > div > div > div > div > img.attachment-medium.size-medium.wp-post-image{
 	height:250px
 }
 
-body > div > div > div > div > ul{
+body > div > div > div > div > div > div > ul{
 	display:flex;
 }
-body > div > div > div > div > ul > li {
+body > div > div > div > div > div > div > ul > li {
 	padding:5px;
 	display:inline;
 }
 
+.block-title:after {
+  
 
-//  les commentaires 
+  content:'';
+  display:inline-block;
+  width:80%; height:4px;
+  margin-right:-100%;
+  margin-left : 2%;
+  border-bottom:4px solid #f2f2f2;
+}
+
+// sidebar principale
+
+#media_image-2 > img{
+	max-width:168px!important;
+	height:300px!important;
+}
+
+//  les commentaires articles
 .comment-form-comment label, .comment-author .avatar {
 	display:none;
 }
